@@ -5,66 +5,6 @@
 (Copied from the changelog file;
 !: note, x: bugfix, X: serious bug (from a technical pov), -: change/addition)
 -------------------------------------------------------------------------------
-428003 | ! (saves likely incompatible due to new monster type)
-       | - major change: special locations are now remembered over resting
-       | X 427351 fix on monsters w/ gaps was only a half fix
-       | X buggy msg (w/ repercussions?) when hit obstacles blind (from 427351)
-       | x don't start w/ fragile weapon breaking (427351) msg
-       | x allow missiling w/ a trepaking weapon in other hand
-       | x don't anger unawares when attacking their friends
-       | x a recent change in object/item logic permitted "stacked" objs
-       | x you can no longer "find" the edge while blind
-       | x finding the edge now generates an interrupt for travel
-       | x interrupting travel (427351) no longer causes loss of "RFND"
-       | - starting to eat a corpse stops "RFND" mode
-       | x invisibles could still be id'ed by refined force once beyond calming
-       | x offer an interrupt chance if an invisible NPC hits PC w/o dmg
-       | - NPCs can, limitedly, switch places w/ each other
-       | - they also use switching to try a little harder to follow PC
-       | x technical fixes&clarification w/ hostiles pursuing vs. fleeing
-       | - stun effect is lessened for immobile monsters
-       | x major flaw in rungup stat increases, cumulative w/ higher rungs
-       | - Nudgy F. no longer affects rungup stat increase frequency
-       | - adjusted encountered NPC rarity dependence on PC rung
-       | x always place unique NPCs in towns within city limits
-       | - praying now happens repeatedly for a period or until interrupted
-       | - act of faith is now always usable even in panic
-       | - puppet shows are now much more likely
-       | x offerings can now be carried out even w/ a very low piety
-       | - quests list now tells if certain quests are completed
-       | - location list now marks known but unvisited places with '*'
-       | X issues (incl. memory leak & segfault) w/ companions on caravans
-       | x minor fix in time spent in casinos & further limit on winnings
-       | - changed the hours of sleeping in inns
-       | x normal weather changes instead of forced when passing lots of time
-       | - weather change msgs always persist
-       | - swimming in dirty water now greatly penalizes Fet
-       | - give xp for improving skills via smalltalk, too, & randomize amount
-       | - lessen xp for participating in combat as PC climbs rungs
-       | x buggy msg printing when teleporting NPC arrives near PC
-       | - made NPC casting Reloc.S. more likely
-       | - NPCs don't cast Whiz Ch. if no foes in range
-       | - Breadc. now (mostly) disappear upon rest
-       | - toned down entertainment value of blizzards
-       | - casting VoS is no longer considered an offensive act
-       | x blood alcohol content could become negative
-       | - lowered prices of recruiting NPCs
-       | - hooded figure & Thilil now walk in circles when idle
-       | - a further easement of hooded's quest
-       | - limited pumping stats w/ potions a bit (still old hard limit)
-       | - allow exceptional uneven distribution rnd values when safe
-       | x don't show hungry/thirsty in statusbar before player warned
-       | x choice [a]... wasn't fully strict; & always clear msgs after
-       | - being passed ouf of exhaustion is not boring
-       | - townsfolk get angry if they find the PC sleeping
-       | - sleep effect now has more to it (cosmetic)
-       | - some new uninformative fishes, one new questionnaire entry
-       | - changed some item&monster properties
-       | - fire eddies now illuminate their surroundings
-       | - new monster (majority)
-       | x typo fixes & cosmetic changes in textual data
-       | - perceptiple optimizations & a new "feature bug", see README.also
-       |
 428083 | x rerender properly @ sunrise/set (bug in 428003 optimization)
        | X very stupid segfault from 428003 change in location forgetting
        | x finally fixed the extra delay when continuing travel
@@ -75,5 +15,37 @@
        | - one of the previously introduced system d. limiters was too harsh
        | - cosmetic changes in textual data
        | - minor optimizations that shouldn't affect anything perceptible
+       |
+428429 | ! (saves likely incompatible due to new items)
+       | X fix of the very stupid segfault in 428083 was also stupid
+       | x rerender properly after all lighting changes (another 428003 bug)
+       | x blowgun now only gives toxic dmg dealing if missiling w/ it
+       | x vocation-granted inflicts weren't always applied properly
+       | - damage info now identifies type inflicts granted by items
+       | x artifacts could be dmg'ed by tossing & dmg'ed items broke @ hps=-1
+       | x spellcasting accidentally provided diversion twice
+       | x very rare&minor printing bug w/ booklet castables in spellbook
+       | x don't print extra bar after picking extra language to know
+       | x less abrupt (as intended) terrain changes
+       | x circle seq. now properly starts only if >=1 Sziggy arti generated
+       | - minor modification in temple generation
+       | - clear out area after wedding feast
+       | x update burden ratio after gaining/losing Miser M.
+       | x always redraw statusbar after rungup
+       | x redraw statusbar after hunger/thirst punishment
+       | x NPCs healing PC in response to asking help cost them an extra sp
+       | - smalltalk w/ a hostile can now end a full conversation
+       | - print a msg when doombr. can again use summon ability
+       | - items of the opulent are now considered enchanted
+       | x a recent change permitted 'trepaking' on non-weapons
+       | - some items now become poisoned when they rot
+       | x interrupt effort-making if moved by wind
+       | - you can now cancel travel by selection dir '5'
+       | - unified cold storage vs. sack handling
+       | x complain when trying to use an empty slot in inventory
+       | - slightly more in-your-face monster generation
+       | - new items: strig, chilled grease; changed some item properties
+       | x typo fixes, changes in textual data & 1 new informative fish
+       | - optimization/refactoring that shouldn't affect anything perceptible
        |
 </pre></body></html>
