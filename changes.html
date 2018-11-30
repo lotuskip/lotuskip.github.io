@@ -5,17 +5,6 @@
 (Copied from the changelog file;
 !: note, x: bugfix, X: serious bug (from a technical pov), -: change/addition)
 -------------------------------------------------------------------------------
-428083 | x rerender properly @ sunrise/set (bug in 428003 optimization)
-       | X very stupid segfault from 428003 change in location forgetting
-       | x finally fixed the extra delay when continuing travel
-       | - inventory is now drenched only if (after) doesn't drown
-       | - items taken from sacks now get dropped if no room or something
-       | x don't print bars when moving items in inventory w/o msgs
-       | x fixed 2 cases where lost artifacts didn't go to L&F
-       | - one of the previously introduced system d. limiters was too harsh
-       | - cosmetic changes in textual data
-       | - minor optimizations that shouldn't affect anything perceptible
-       |
 428429 | ! (saves likely incompatible due to new items)
        | X fix of the very stupid segfault in 428083 was also stupid
        | x rerender properly after all lighting changes (another 428003 bug)
@@ -47,5 +36,28 @@
        | - new items: strig, chilled grease; changed some item properties
        | x typo fixes, changes in textual data & 1 new informative fish
        | - optimization/refactoring that shouldn't affect anything perceptible
+       |
+428777 | ! yet again a new item that very well might break saves
+       | X segfault when resting after being close to edge (from 428429?)
+       | x rerender properly after climbing stairs (another 428003 bug)
+       | x force messenger special ai to work when he is generated
+       | x NPCs can now accidentally break items, too (as intended)
+       | - start w/ misc slots when choosing a corpse to use, too
+       | - booklet casting can now damage booklets
+       | - experienced PCs get less excited
+       | x spell booklet value miscalculation caused trouble w/ exorcist
+       | - stubborn items no longer get pickpocketed
+       | x tossing valuables at NPCs, comically, *un*set the calmable flag
+       | x attacks killing nonhostiles instantly didn't anger their friends
+       | - flush input buffer when task finished (won't register keys during)
+       | x '#' didn't print damage quirks anymore (from a recent update)
+       | - the key to cancel container handling is now 'x' instead of 'n'
+       | - _all_ weather changing messages now linger for a while
+       | - msg about becoming the irc king now lingers for a while
+       | - seers report on destroy quest progress
+       | - new item: wine amphora
+       | - changed some monster specs
+       | - cosmetic changes in textual data
+       | - code reorganization that shouldn't affect anything perceptible
        |
 </pre></body></html>
