@@ -5,38 +5,6 @@
 (Copied from the changelog file;
 !: note, x: bugfix, X: serious bug (from a technical pov), -: change/addition)
 -------------------------------------------------------------------------------
-428429 | ! (saves likely incompatible due to new items)
-       | X fix of the very stupid segfault in 428083 was also stupid
-       | x rerender properly after all lighting changes (another 428003 bug)
-       | x blowgun now only gives toxic dmg dealing if missiling w/ it
-       | x vocation-granted inflicts weren't always applied properly
-       | - damage info now identifies type inflicts granted by items
-       | x artifacts could be dmg'ed by tossing & dmg'ed items broke @ hps=-1
-       | x spellcasting accidentally provided diversion twice
-       | x very rare&minor printing bug w/ booklet castables in spellbook
-       | x don't print extra bar after picking extra language to know
-       | x less abrupt (as intended) terrain changes
-       | x circle seq. now properly starts only if >=1 Sziggy arti generated
-       | - minor modification in temple generation
-       | - clear out area after wedding feast
-       | x update burden ratio after gaining/losing Miser M.
-       | x always redraw statusbar after rungup
-       | x redraw statusbar after hunger/thirst punishment
-       | x NPCs healing PC in response to asking help cost them an extra sp
-       | - smalltalk w/ a hostile can now end a full conversation
-       | - print a msg when doombr. can again use summon ability
-       | - items of the opulent are now considered enchanted
-       | x a recent change permitted 'trepaking' on non-weapons
-       | - some items now become poisoned when they rot
-       | x interrupt effort-making if moved by wind
-       | - you can now cancel travel by selection dir '5'
-       | - unified cold storage vs. sack handling
-       | x complain when trying to use an empty slot in inventory
-       | - slightly more in-your-face monster generation
-       | - new items: strig, chilled grease; changed some item properties
-       | x typo fixes, changes in textual data & 1 new informative fish
-       | - optimization/refactoring that shouldn't affect anything perceptible
-       |
 428777 | ! yet again a new item that very well might break saves
        | X segfault when resting after being close to edge (from 428429?)
        | x rerender properly after climbing stairs (another 428003 bug)
@@ -59,5 +27,51 @@
        | - changed some monster specs
        | - cosmetic changes in textual data
        | - code reorganization that shouldn't affect anything perceptible
+       |
+429427 | ! last set of new items to break saves, promise
+       | X fixed segfault resulting from dropping 0pp (old!)
+       | - changed how new monster generation works
+       | - guarantee the messenger gets generated (try again later)
+       | x really manic monster are now really always hostile (as intended)
+       | x further (final?) fix on the extra delay when traveling
+       | - base travel delay increased by 50%
+       | - time consuming actions are delayed less when nothing happens
+       | - & apply similar delay when paralyzed
+       | x fixed "sleep" rendering when finding home (in part from 428003)
+       | x tweak of sleep render & force it to be ASCII only (display bugs)
+       | x partially forgotten locations (428003) condition was reversed
+       | - attack confirmation msg now mentions target status
+       | x delicate issues w/ attacked NPCs noticing the PC
+       | x don't use special hit verb when NPC uses found missile weapon
+       | - empty bottles now behave like fragile items as melee weapons
+       | - companions no longer get upset over nudism
+       | x when trying to switch places, stop hiding also when target angered
+       | - adjusted summoned minion progression
+       | - glare of D. now slows down target a bit
+       | - changed doombringer "job description" somewhat
+       | - backstabbing now fights boredom
+       | - survival won't work on the same square twice
+       | - physical damage resistance is now banned for most starsigns
+       | x properly check if should msg about multitile hostiles in lotus g.
+       | x proper hiscore "while" strings for some special death conditions
+       | x resting didn't consume nutrition (from 422057?)
+       | x a recent update accidentally permitted objects on doorways
+       | x exorcist "tricky" comment condition was(?) reversed
+       | x caravan "daily specials" no longer can change when you revisit
+       | x fixed casino wins formula: no reward for initially laid cards
+       | x dealt w/ more cases of extra bars printed in inventory mishandling
+       | - drinking from pools/springs washes worst filth
+       | - you now cannot eat completely dry stuff if parched
+       | x always refer to plural items in a grammatically correct way
+       | - modifications in boutique selections
+       | - limit item rarity in special stores according to PC level
+       | x use item pp value when estimating value
+       | - new items: shell, strapped boots, ring toy
+       | - changed some item specs, esp. colours
+       | - river & swamp trollers can now swim
+       | x don't ask for more if the next msg is just a bar (skip the bar then)
+       | - clear msgs always after reading player-typed strings
+       | - not entirely cosmetic changes in textual data
+       | - optimization that shouldn't affect anything significant
        |
 </pre></body></html>
