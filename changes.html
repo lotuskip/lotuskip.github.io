@@ -5,29 +5,6 @@
 (Copied from the changelog file;
 !: note, x: bugfix, X: serious bug (from a technical pov), -: change/addition)
 -------------------------------------------------------------------------------
-428777 | ! yet again a new item that very well might break saves
-       | X segfault when resting after being close to edge (from 428429?)
-       | x rerender properly after climbing stairs (another 428003 bug)
-       | x force messenger special ai to work when he is generated
-       | x NPCs can now accidentally break items, too (as intended)
-       | - start w/ misc slots when choosing a corpse to use, too
-       | - booklet casting can now damage booklets
-       | - experienced PCs get less excited
-       | x spell booklet value miscalculation caused trouble w/ exorcist
-       | - stubborn items no longer get pickpocketed
-       | x tossing valuables at NPCs, comically, *un*set the calmable flag
-       | x attacks killing nonhostiles instantly didn't anger their friends
-       | - flush input buffer when task finished (won't register keys during)
-       | x '#' didn't print damage quirks anymore (from a recent update)
-       | - the key to cancel container handling is now 'x' instead of 'n'
-       | - _all_ weather changing messages now linger for a while
-       | - msg about becoming the irc king now lingers for a while
-       | - seers report on destroy quest progress
-       | - new item: wine amphora
-       | - changed some monster specs
-       | - cosmetic changes in textual data
-       | - code reorganization that shouldn't affect anything perceptible
-       |
 429427 | ! last set of new items to break saves, promise
        | X fixed segfault resulting from dropping 0pp (old!)
        | - changed how new monster generation works
@@ -73,5 +50,30 @@
        | - clear msgs always after reading player-typed strings
        | - not entirely cosmetic changes in textual data
        | - optimization that shouldn't affect anything significant
+       |
+430013 | - new interrupt types for NPCs dividing & companions facing hostiles
+       | x 429427 paralyzation delay was applied to all monsters...
+       | x tasks can now be interrupted by RBR
+       | x being shoved aside could unset some interrupt flags
+       | x change&fix smalltalk rules when relying on an item of lingo
+       | x fixed some more instances of plural items referred to in singular
+       | - corpses & items prone to rot no longer go into L&F
+       | - wearable items prone to rot are less likely to rot
+       | - diving for treasure now fights boredom
+       | - adjusted item suffix effects on pp value
+       | - changed cartographer pricing & revealed location logic
+       | x caravan special offer prices were fixed & too high
+       | - added little helpers in reaching the endgame
+       | X segfault upon endgame start (lift frozen actor)
+       | - clear all quests & roughen terrain in endgame
+       | - crazy dungeon walls are now see-thru
+       | - increased Wintero acid damage
+       | x redraw statusbar during Wintero seq.
+       | x statusbar now properly shows being overburdened
+       | x keep nutrition consumption w/ ridiculous burden reasonable
+       | - also, Mule reduces said consumption
+       | - eulogy entries now end (instead of starting) w/ 2 newlines
+       | x typo fixes, some new rumours
+       | - minor optimization / code cleanup
        |
 </pre></body></html>
