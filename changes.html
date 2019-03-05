@@ -5,52 +5,6 @@
 (Copied from the changelog file;
 !: note, x: bugfix, X: serious bug (from a technical pov), -: change/addition)
 -------------------------------------------------------------------------------
-429427 | ! last set of new items to break saves, promise
-       | X fixed segfault resulting from dropping 0pp (old!)
-       | - changed how new monster generation works
-       | - guarantee the messenger gets generated (try again later)
-       | x really manic monster are now really always hostile (as intended)
-       | x further (final?) fix on the extra delay when traveling
-       | - base travel delay increased by 50%
-       | - time consuming actions are delayed less when nothing happens
-       | - & apply similar delay when paralyzed
-       | x fixed "sleep" rendering when finding home (in part from 428003)
-       | x tweak of sleep render & force it to be ASCII only (display bugs)
-       | x partially forgotten locations (428003) condition was reversed
-       | - attack confirmation msg now mentions target status
-       | x delicate issues w/ attacked NPCs noticing the PC
-       | x don't use special hit verb when NPC uses found missile weapon
-       | - empty bottles now behave like fragile items as melee weapons
-       | - companions no longer get upset over nudism
-       | x when trying to switch places, stop hiding also when target angered
-       | - adjusted summoned minion progression
-       | - glare of D. now slows down target a bit
-       | - changed doombringer "job description" somewhat
-       | - backstabbing now fights boredom
-       | - survival won't work on the same square twice
-       | - physical damage resistance is now banned for most starsigns
-       | x properly check if should msg about multitile hostiles in lotus g.
-       | x proper hiscore "while" strings for some special death conditions
-       | x resting didn't consume nutrition (from 422057?)
-       | x a recent update accidentally permitted objects on doorways
-       | x exorcist "tricky" comment condition was(?) reversed
-       | x caravan "daily specials" no longer can change when you revisit
-       | x fixed casino wins formula: no reward for initially laid cards
-       | x dealt w/ more cases of extra bars printed in inventory mishandling
-       | - drinking from pools/springs washes worst filth
-       | - you now cannot eat completely dry stuff if parched
-       | x always refer to plural items in a grammatically correct way
-       | - modifications in boutique selections
-       | - limit item rarity in special stores according to PC level
-       | x use item pp value when estimating value
-       | - new items: shell, strapped boots, ring toy
-       | - changed some item specs, esp. colours
-       | - river & swamp trollers can now swim
-       | x don't ask for more if the next msg is just a bar (skip the bar then)
-       | - clear msgs always after reading player-typed strings
-       | - not entirely cosmetic changes in textual data
-       | - optimization that shouldn't affect anything significant
-       |
 430013 | - new interrupt types for NPCs dividing & companions facing hostiles
        | x 429427 paralyzation delay was applied to all monsters...
        | x tasks can now be interrupted by RBR
@@ -75,5 +29,46 @@
        | - eulogy entries now end (instead of starting) w/ 2 newlines
        | x typo fixes, some new rumours
        | - minor optimization / code cleanup
+       |
+431051 | - significantly changed division rules
+       | - changes in what happens during rest
+       | - ai: consider melee option when casting RBR/Parchment/B-Ray
+       | - NPCs can now also cast R. Light in order to blind on purpose
+       | - refined attack difficulty is now increased by hunger/thirst
+       | - and decreased if merely unarmed (used to be: empty-handed)
+       | x lose "RFND" when damaging creatures by tossing items at them
+       | x a not-so-recent change lost the msg about losing sight of tossed pp
+       | - lenitive food now works identically w/ PC & NPCs
+       | - laxative effect is now item weight-dependent & cumulative
+       | x msg for finished urinating was wrong colour 
+       | - lowered the likelihoods of undiggable walls
+       | - a wee bit more NPCs in newly generated locations
+       | x NPCs w/o hands shouldn't "slap" the PC
+       | - practical jokes always anger townsfolk if performed naked
+       | x joke-on-self boringness test condition was reversed
+       | - unaware listeners are now roused by jargon
+       | - victim sniffing now comes with a visual aid (+1 new "feature bug")
+       | - getting caught pickpocketing renders target beyond calming
+       | x noticing a pickpocket generates an interrupt chance for tasks
+       | X minor issues & 1 potentially unsafe thing in random word generation
+       | - tweaked generated tongue "characteristics"
+       | x disallow chatting underwater
+       | x attacking immune companions shouldn't affect manicity
+       | x burden ratio shown in statusbar wasn't properly rounded
+       | x fixed sp colour logic in statusbar
+       | x don't repeatedly msg about completing a slay quest
+       | - give a msg when catapult kills something
+       | - caravan special offers are offered only once per visit
+       | x cartographer pricing adjustment in 430013 was sloppily implemented
+       | x L&F change in 430013 made it possible to have no initial item there
+       | - librarians are now less likely to damage spell booklets
+       | - change pendant->de-pendant (name & weight)
+       | - Tune-in F. now picks targets by distance, not by LOS
+       | x a typo fix & other cosmetic changes in textual data
+       | x don't let the 'a'pply command cause a [more] prompt mid-selection
+       | - optimization & code reorganization/cleanup; related to this:
+       |   - changed the order of some accomplishments in the igloo
+       |   - changed the order of status indicators in the statusbar
+       |   - full monster memory now mentions missiling & grouping
        |
 </pre></body></html>
