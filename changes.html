@@ -5,31 +5,6 @@
 (Copied from the changelog file;
 !: note, x: bugfix, X: serious bug (from a technical pov), -: change/addition)
 -------------------------------------------------------------------------------
-430013 | - new interrupt types for NPCs dividing & companions facing hostiles
-       | x 429427 paralyzation delay was applied to all monsters...
-       | x tasks can now be interrupted by RBR
-       | x being shoved aside could unset some interrupt flags
-       | x change&fix smalltalk rules when relying on an item of lingo
-       | x fixed some more instances of plural items referred to in singular
-       | - corpses & items prone to rot no longer go into L&F
-       | - wearable items prone to rot are less likely to rot
-       | - diving for treasure now fights boredom
-       | - adjusted item suffix effects on pp value
-       | - changed cartographer pricing & revealed location logic
-       | x caravan special offer prices were fixed & too high
-       | - added little helpers in reaching the endgame
-       | X segfault upon endgame start (lift frozen actor)
-       | - clear all quests & roughen terrain in endgame
-       | - crazy dungeon walls are now see-thru
-       | - increased Wintero acid damage
-       | x redraw statusbar during Wintero seq.
-       | x statusbar now properly shows being overburdened
-       | x keep nutrition consumption w/ ridiculous burden reasonable
-       | - also, Mule reduces said consumption
-       | - eulogy entries now end (instead of starting) w/ 2 newlines
-       | x typo fixes, some new rumours
-       | - minor optimization / code cleanup
-       |
 431051 | - significantly changed division rules
        | - changes in what happens during rest
        | - ai: consider melee option when casting RBR/Parchment/B-Ray
@@ -70,5 +45,34 @@
        |   - changed the order of some accomplishments in the igloo
        |   - changed the order of status indicators in the statusbar
        |   - full monster memory now mentions missiling & grouping
+       |
+431533 | - significantly changed how necromantic t. works
+       | X 430013 segfault fix caused issues w/ dying chat target
+       | X old: vocation masking had padre&tinkerer missing altogether
+       | X & embarrasing: entering a <0 pp number had strange results
+       | x it wasn't possible to enter -1 as the catapult firing angle
+       | - one can now (re)enter a service w/ 'u' while standing on the door
+       | - repeat casino bet & catapult questions on faulty input
+       | - repeat alchemy ingredient list on faulty input
+       | x used up whisks weren't getting destroyed anymore
+       | x resting in an inn or @ home didn't clear off panic
+       | - further tweaking of what happens during rest
+       | - wilderness home location is now remembered past resting
+       | x at some point, empty home inventory msg got lost
+       | x parts of the wilderness were not properly forgotten upon rest
+       | - increased bush hiding usability
+       | - minor change on xp gained from booklet casting
+       | - friendly NPCs are now more careful w/ casting Boring M.
+       | x apply various side effects also when backstab attempt fails
+       | x all, not just trepaking, items gave inflict types in misc slots
+       | - several additional items can now be used as alchemy reagents
+       | - pickp'ed item now said to be "lost" if falls on the ground
+       | - it's no longer possible to place stubborn items inside containers
+       | x sentences w/ 2 different item names didn't get build properly
+       | x taking camo tent out of the tool slot now ends hiding in it
+       | x joke-on-self was still bugged (always ended up entertaining)
+       | x correctly crop multibyte utf-8 in PC name
+       | x typo as well as cosmetic fixes & one new informative fish
+       | - minor optimization & code cleanup
        |
 </pre></body></html>
