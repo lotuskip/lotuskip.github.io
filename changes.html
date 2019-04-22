@@ -5,47 +5,6 @@
 (Copied from the changelog file;
 !: note, x: bugfix, X: serious bug (from a technical pov), -: change/addition)
 -------------------------------------------------------------------------------
-431051 | - significantly changed division rules
-       | - changes in what happens during rest
-       | - ai: consider melee option when casting RBR/Parchment/B-Ray
-       | - NPCs can now also cast R. Light in order to blind on purpose
-       | - refined attack difficulty is now increased by hunger/thirst
-       | - and decreased if merely unarmed (used to be: empty-handed)
-       | x lose "RFND" when damaging creatures by tossing items at them
-       | x a not-so-recent change lost the msg about losing sight of tossed pp
-       | - lenitive food now works identically w/ PC & NPCs
-       | - laxative effect is now item weight-dependent & cumulative
-       | x msg for finished urinating was wrong colour 
-       | - lowered the likelihoods of undiggable walls
-       | - a wee bit more NPCs in newly generated locations
-       | x NPCs w/o hands shouldn't "slap" the PC
-       | - practical jokes always anger townsfolk if performed naked
-       | x joke-on-self boringness test condition was reversed
-       | - unaware listeners are now roused by jargon
-       | - victim sniffing now comes with a visual aid (+1 new "feature bug")
-       | - getting caught pickpocketing renders target beyond calming
-       | x noticing a pickpocket generates an interrupt chance for tasks
-       | X minor issues & 1 potentially unsafe thing in random word generation
-       | - tweaked generated tongue "characteristics"
-       | x disallow chatting underwater
-       | x attacking immune companions shouldn't affect manicity
-       | x burden ratio shown in statusbar wasn't properly rounded
-       | x fixed sp colour logic in statusbar
-       | x don't repeatedly msg about completing a slay quest
-       | - give a msg when catapult kills something
-       | - caravan special offers are offered only once per visit
-       | x cartographer pricing adjustment in 430013 was sloppily implemented
-       | x L&F change in 430013 made it possible to have no initial item there
-       | - librarians are now less likely to damage spell booklets
-       | - change pendant->de-pendant (name & weight)
-       | - Tune-in F. now picks targets by distance, not by LOS
-       | x a typo fix & other cosmetic changes in textual data
-       | x don't let the 'a'pply command cause a [more] prompt mid-selection
-       | - optimization & code reorganization/cleanup; related to this:
-       |   - changed the order of some accomplishments in the igloo
-       |   - changed the order of status indicators in the statusbar
-       |   - full monster memory now mentions missiling & grouping
-       |
 431533 | - significantly changed how necromantic t. works
        | X 430013 segfault fix caused issues w/ dying chat target
        | X old: vocation masking had padre&tinkerer missing altogether
@@ -74,5 +33,34 @@
        | x correctly crop multibyte utf-8 in PC name
        | x typo as well as cosmetic fixes & one new informative fish
        | - minor optimization & code cleanup
+       |
+432199 | - rest tweaks in 2 prev versions made learning Cant too hard
+       | x also, said tweaks could turn uniques hostile during rest
+       | - in 2-hit tests, resting PC is now treated as if paralyzed
+       | - lightning is now considered more interesting
+       | - rare corpses&booklets are now more interesting to eat
+       | x getting hold of oneself can now interrupt tasks
+       | x and so can NPCs teleporting into sight
+       | x an almost imperceptible goof in P. Sight
+       | - give msg of standing still when blind
+       | x fix pixie quest reward check against regenerating an artifact
+       | - require space (instead of any key) when giving pixie quest reward
+       | - surviving Wintero now requires a special torch
+       | X issues w/ Thilil & hooded figure generation
+       | X endgame helper from 430013 was a problem over the edge
+       | - slight increase in likelihood of NPCs carrying hp sources
+       | - slight increase in NPCs turning when walking "aimlessly"
+       | - modification in monster generation for non-wilderness places
+       | x place switching could reveal unseen spots (from 428003)
+       | - improved NPC place switching rules, esp. for companions
+       | - minor changes in item pp value factors
+       | - combat&digging made somewhat less tiring
+       | - toned down booze effect on boredom
+       | - it's no longer possible to eat unbread while fasting
+       | - also, drastically lessened unbread effect on thirst
+       | - increased meal sizes in inns
+       | - repeat shop purchase question on faulty input
+       | x a typo fix & cosmetic changes in textual data
+       | - optimization & code cleanup
        |
 </pre></body></html>
