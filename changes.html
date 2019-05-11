@@ -5,35 +5,6 @@
 (Copied from the changelog file;
 !: note, x: bugfix, X: serious bug (from a technical pov), -: change/addition)
 -------------------------------------------------------------------------------
-431533 | - significantly changed how necromantic t. works
-       | X 430013 segfault fix caused issues w/ dying chat target
-       | X old: vocation masking had padre&tinkerer missing altogether
-       | X & embarrasing: entering a <0 pp number had strange results
-       | x it wasn't possible to enter -1 as the catapult firing angle
-       | - one can now (re)enter a service w/ 'u' while standing on the door
-       | - repeat casino bet & catapult questions on faulty input
-       | - repeat alchemy ingredient list on faulty input
-       | x used up whisks weren't getting destroyed anymore
-       | x resting in an inn or @ home didn't clear off panic
-       | - further tweaking of what happens during rest
-       | - wilderness home location is now remembered past resting
-       | x at some point, empty home inventory msg got lost
-       | x parts of the wilderness were not properly forgotten upon rest
-       | - increased bush hiding usability
-       | - minor change on xp gained from booklet casting
-       | - friendly NPCs are now more careful w/ casting Boring M.
-       | x apply various side effects also when backstab attempt fails
-       | x all, not just trepaking, items gave inflict types in misc slots
-       | - several additional items can now be used as alchemy reagents
-       | - pickp'ed item now said to be "lost" if falls on the ground
-       | - it's no longer possible to place stubborn items inside containers
-       | x sentences w/ 2 different item names didn't get build properly
-       | x taking camo tent out of the tool slot now ends hiding in it
-       | x joke-on-self was still bugged (always ended up entertaining)
-       | x correctly crop multibyte utf-8 in PC name
-       | x typo as well as cosmetic fixes & one new informative fish
-       | - minor optimization & code cleanup
-       |
 432199 | - rest tweaks in 2 prev versions made learning Cant too hard
        | x also, said tweaks could turn uniques hostile during rest
        | - in 2-hit tests, resting PC is now treated as if paralyzed
@@ -61,6 +32,30 @@
        | - increased meal sizes in inns
        | - repeat shop purchase question on faulty input
        | x a typo fix & cosmetic changes in textual data
+       | - optimization & code cleanup
+       |
+432661 | - vastly improved "house-like" dungeon generation algorithm
+       | X fixed obscure segfault related to placing Bloch
+       | - whiz fail rate due to drunkenness is now progressive
+       | - improved stealth check logic
+       | X fixed hang when entering Chuck'ole (old bug!)
+       | - unification of what monsters are considered "living"
+       | - NPCs no longer talk to nonliving creatures
+       | - suffering ph dmg while immune temporarily penalizes solidity
+       | - increased pain toleration window
+       | - unbread can now be eaten even if full
+       | x berries can no longer be eaten while full
+       | - minor adjustments in boutique item selection
+       | - mark completed Bloch quest as done in quest listing
+       | - lowered casino special prize win limit
+       | - add one more way of procuring Sziggy artifacts
+       | x don't msg about entering the chamber @ outside corner
+       | - add a helper in finding dungeons, similar to town noises
+       | x don't say the wall is an illusion if walking blind
+       | - win msg is now recorded in msg buffer
+       | - msg separator bars are wider (max width for min screen size)
+       | - a couple minor changes in hard-coded maps & service plans
+       | - cosmetic changes in textual data
        | - optimization & code cleanup
        |
 </pre></body></html>
