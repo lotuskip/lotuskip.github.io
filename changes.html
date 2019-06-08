@@ -5,35 +5,6 @@
 (Copied from the changelog file;
 !: note, x: bugfix, X: serious bug (from a technical pov), -: change/addition)
 -------------------------------------------------------------------------------
-432199 | - rest tweaks in 2 prev versions made learning Cant too hard
-       | x also, said tweaks could turn uniques hostile during rest
-       | - in 2-hit tests, resting PC is now treated as if paralyzed
-       | - lightning is now considered more interesting
-       | - rare corpses&booklets are now more interesting to eat
-       | x getting hold of oneself can now interrupt tasks
-       | x and so can NPCs teleporting into sight
-       | x an almost imperceptible goof in P. Sight
-       | - give msg of standing still when blind
-       | x fix pixie quest reward check against regenerating an artifact
-       | - require space (instead of any key) when giving pixie quest reward
-       | - surviving Wintero now requires a special torch
-       | X issues w/ Thilil & hooded figure generation
-       | X endgame helper from 430013 was a problem over the edge
-       | - slight increase in likelihood of NPCs carrying hp sources
-       | - slight increase in NPCs turning when walking "aimlessly"
-       | - modification in monster generation for non-wilderness places
-       | x place switching could reveal unseen spots (from 428003)
-       | - improved NPC place switching rules, esp. for companions
-       | - minor changes in item pp value factors
-       | - combat&digging made somewhat less tiring
-       | - toned down booze effect on boredom
-       | - it's no longer possible to eat unbread while fasting
-       | - also, drastically lessened unbread effect on thirst
-       | - increased meal sizes in inns
-       | - repeat shop purchase question on faulty input
-       | x a typo fix & cosmetic changes in textual data
-       | - optimization & code cleanup
-       |
 432661 | - vastly improved "house-like" dungeon generation algorithm
        | X fixed obscure segfault related to placing Bloch
        | - whiz fail rate due to drunkenness is now progressive
@@ -55,6 +26,22 @@
        | - win msg is now recorded in msg buffer
        | - msg separator bars are wider (max width for min screen size)
        | - a couple minor changes in hard-coded maps & service plans
+       | - cosmetic changes in textual data
+       | - optimization & code cleanup
+       |
+433337 | - double vulnerability effect on xp factor
+       | - if both hungry&thirsty, received help now satisfies both
+       | x meal size increase in 432199 only half-happened (??)
+       | x fix double msgs from entering places w/ 'u' (from 431533)
+       | x notify of Mule wearing off even if blind
+       | x fix problems w/ certain multitile NPCs casting Parchment
+       | - Person Sp. won't break in forced sleep on same turn as wakes up
+       | x some things didn't interrupt effort making / b. restoration
+       | - irritated Sziggy can no longer be calmed
+       | - relaxed (a bit) the requirements of wearing Sz's stuff
+       | - allow 0 weight for lastium&permantium items
+       | X strange things would happen when trying to use ability 4...
+       | - require space (instead of any key) in a few more situations
        | - cosmetic changes in textual data
        | - optimization & code cleanup
        |
