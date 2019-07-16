@@ -5,30 +5,6 @@
 (Copied from the changelog file;
 !: note, x: bugfix, X: serious bug (from a technical pov), -: change/addition)
 -------------------------------------------------------------------------------
-432661 | - vastly improved "house-like" dungeon generation algorithm
-       | X fixed obscure segfault related to placing Bloch
-       | - whiz fail rate due to drunkenness is now progressive
-       | - improved stealth check logic
-       | X fixed hang when entering Chuck'ole (old bug!)
-       | - unification of what monsters are considered "living"
-       | - NPCs no longer talk to nonliving creatures
-       | - suffering ph dmg while immune temporarily penalizes solidity
-       | - increased pain toleration window
-       | - unbread can now be eaten even if full
-       | x berries can no longer be eaten while full
-       | - minor adjustments in boutique item selection
-       | - mark completed Bloch quest as done in quest listing
-       | - lowered casino special prize win limit
-       | - add one more way of procuring Sziggy artifacts
-       | x don't msg about entering the chamber @ outside corner
-       | - add a helper in finding dungeons, similar to town noises
-       | x don't say the wall is an illusion if walking blind
-       | - win msg is now recorded in msg buffer
-       | - msg separator bars are wider (max width for min screen size)
-       | - a couple minor changes in hard-coded maps & service plans
-       | - cosmetic changes in textual data
-       | - optimization & code cleanup
-       |
 433337 | - double vulnerability effect on xp factor
        | - if both hungry&thirsty, received help now satisfies both
        | x meal size increase in 432199 only half-happened (??)
@@ -44,5 +20,30 @@
        | - require space (instead of any key) in a few more situations
        | - cosmetic changes in textual data
        | - optimization & code cleanup
+       |
+434243 | X sometimes conversations weren't properly ended upon death
+       | X use after free in the Am'Odder meeting sequence
+       | - changed how casting novel spells fights boredom and yields xp
+       | - don't ever skip generating new NPCs altogether
+       | x boredom creeping in can now interrupt tasks
+       | x unseen miasmas weren't treated as eddies when attacking
+       | - tweaks in stealth rules
+       | - said tweaks also happen to affect NPC place switching
+       | x help could give too much food when also thirsty (from 433337)
+       | x Sziggy mod in 433337 made it possible not to surrender a wieldable
+       | X entering the temple early could crash the game (from 427351)
+       | - items of the opulent now only work when in the right slot
+       | - msg about leaving a L&F also when no items there
+       | - BL classes can now bore, too
+       | - adjusted different seer reward likelihoods
+       | - show carried pp when quack offers to remove a "condition"
+       | - increase bigwig starting pp
+       | - don't ask if player wants to navigate by direction instead
+       | - ask to choose booklet to peruse before lighting check
+       | x always clear msg window when entering inventory
+       | x changes in textual data, mostly cosmetic
+       | - new igloo colours
+       | - use floats instead of fractions in places; rounding might differ
+       | - minor optimization & code reorganizing
        |
 </pre></body></html>
