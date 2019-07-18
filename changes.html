@@ -5,22 +5,6 @@
 (Copied from the changelog file;
 !: note, x: bugfix, X: serious bug (from a technical pov), -: change/addition)
 -------------------------------------------------------------------------------
-433337 | - double vulnerability effect on xp factor
-       | - if both hungry&thirsty, received help now satisfies both
-       | x meal size increase in 432199 only half-happened (??)
-       | x fix double msgs from entering places w/ 'u' (from 431533)
-       | x notify of Mule wearing off even if blind
-       | x fix problems w/ certain multitile NPCs casting Parchment
-       | - Person Sp. won't break in forced sleep on same turn as wakes up
-       | x some things didn't interrupt effort making / b. restoration
-       | - irritated Sziggy can no longer be calmed
-       | - relaxed (a bit) the requirements of wearing Sz's stuff
-       | - allow 0 weight for lastium&permantium items
-       | X strange things would happen when trying to use ability 4...
-       | - require space (instead of any key) in a few more situations
-       | - cosmetic changes in textual data
-       | - optimization & code cleanup
-       |
 434243 | X sometimes conversations weren't properly ended upon death
        | X use after free in the Am'Odder meeting sequence
        | - changed how casting novel spells fights boredom and yields xp
@@ -45,5 +29,9 @@
        | - new igloo colours
        | - use floats instead of fractions in places; rounding might differ
        | - minor optimization & code reorganizing
+       |
+434297 | X revert booklet/light check order in 434243
+       | X also from 434243, fix ghost object inventories
+       | - very minor optimization & code reorganizing
        |
 </pre></body></html>
