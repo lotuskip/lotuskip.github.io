@@ -5,33 +5,57 @@
 (Copied from the changelog file;
 !: note, x: bugfix, X: serious bug (from a technical pov), -: change/addition)
 -------------------------------------------------------------------------------
-434243 | X sometimes conversations weren't properly ended upon death
-       | X use after free in the Am'Odder meeting sequence
-       | - changed how casting novel spells fights boredom and yields xp
-       | - don't ever skip generating new NPCs altogether
-       | x boredom creeping in can now interrupt tasks
-       | x unseen miasmas weren't treated as eddies when attacking
-       | - tweaks in stealth rules
-       | - said tweaks also happen to affect NPC place switching
-       | x help could give too much food when also thirsty (from 433337)
-       | x Sziggy mod in 433337 made it possible not to surrender a wieldable
-       | X entering the temple early could crash the game (from 427351)
-       | - items of the opulent now only work when in the right slot
-       | - msg about leaving a L&F also when no items there
-       | - BL classes can now bore, too
-       | - adjusted different seer reward likelihoods
-       | - show carried pp when quack offers to remove a "condition"
-       | - increase bigwig starting pp
-       | - don't ask if player wants to navigate by direction instead
-       | - ask to choose booklet to peruse before lighting check
-       | x always clear msg window when entering inventory
-       | x changes in textual data, mostly cosmetic
-       | - new igloo colours
-       | - use floats instead of fractions in places; rounding might differ
-       | - minor optimization & code reorganizing
-       |
 434297 | X revert booklet/light check order in 434243
        | X also from 434243, fix ghost object inventories
        | - very minor optimization & code reorganizing
+       |
+435437 | - unaware monsters are now easier to hit
+       | X nonreaped NPCs upon save corrupted the file
+       | - tweaked travel so it gives up less easily
+       | x bring Am'Odders together even if talking to the manic one
+       | x seer "kill" quest target can no longer be non-living
+       | - seers reward w/ language skills more often when fewer tongues known
+       | - seers reward w/ spells more often when fewer spells known
+       | - seers can now have any "alignment" (not tied to language)
+       | - pawnshops now carry occasional already pawned items
+       | x inn rest "until morning" was flawed (from 428003)
+       | - also, changed the time limit for resting until evening/morning
+       | - don't automatically leave home after managing stuff there
+       | - add one more service spot to Meedeeocker; minor changes in Pratof.
+       | X faulty malloc in creating the quack's beverage for sale
+       | - repeat instructions in L&F on bad input
+       | x fixed Feeble Tongue quirk
+       | - bumblebee starsign help now works every time
+       | x shields shouldn't be "of [foo] mowing"
+       | x acid blade should deal acid damage also when tossed
+       | x iron k. shouldn't work when sps=0
+       | x fliers should be vulnerable to water
+       | - lenitive food effect is now harder to resist
+       | X double free when searching certain Chuck'ole muckheaps (from 434297)
+       | - almost deserted anthills can now withstand dmg (simplifies code)
+       | - the type description of a few items may have changed (--||--)
+       | - SC can now hit both object & NPC on the same tile (--||--)
+       | - SC backfire now strikes last monster hit & not killed if any
+       | - small changes in how spellcasting "trains" whizpower
+       | - small adjustments in starting spell likelihoods
+       | x Mule didn't have an effect on tiring even though burden does
+       | - offensive spells are described as such when "RFND"
+       | x Bliz-E., SC & eddy attacks now damage carried items
+       | x miasmas & shambling/sorry vertices dealt wrong dmg type on objects
+       | x don't identify items on the ground if blind
+       | - msg when blindness ends
+       | x it's no longer possible to eat/drink while underwater
+       | - permit doombr. sps to exceed max from corpse eating
+       | - abilities now can't fail twice in a row due to panic/drunkenness
+       | - give a bit of xp for using alchemy
+       | - picking pockets fights boredom less as PC attains higher rungs
+       | - jargon can now work on inherently hostile NPCs & yields xp
+       | - postglory gets more exciting & can return hps
+       | x reset msg delay when msgs are cleared
+       | - always clear msgs when viewing spellbook
+       | x change Bloch's response to smalltalk when he's hostile
+       | - generated YM now has longer words on average
+       | x typo fixes & cosmetic changes in textual data
+       | - optimization & code reorganizing
        |
 </pre></body></html>
