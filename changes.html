@@ -5,10 +5,6 @@
 (Copied from the changelog file;
 !: note, x: bugfix, X: serious bug (from a technical pov), -: change/addition)
 -------------------------------------------------------------------------------
-434297 | X revert booklet/light check order in 434243
-       | X also from 434243, fix ghost object inventories
-       | - very minor optimization & code reorganizing
-       |
 435437 | - unaware monsters are now easier to hit
        | X nonreaped NPCs upon save corrupted the file
        | - tweaked travel so it gives up less easily
@@ -56,6 +52,25 @@
        | x change Bloch's response to smalltalk when he's hostile
        | - generated YM now has longer words on average
        | x typo fixes & cosmetic changes in textual data
+       | - optimization & code reorganizing
+       |
+435763 | x 435437 messed up inventory misc slot checks
+       | x 435437 partially broke dynamic lighting!
+       | x 435437 broke overlapping multitile monsters!!
+       | X 435437 put an array index out of bounds when getting very tired!!!
+       | - rungups can no longer be attained while combating
+       | x record kill when NPC dies of eating tossed food
+       | - eating unbread now affects hunger res/vul/imm (NPCs' too)
+       | - almost drowning can now cause you to lose "RFND"
+       | - mystics' initial booklet can now be a language one
+       | x librarians now need >= 1% tongue skill to improve by perusal
+       | - eyeballing weaklings now scares them every time
+       | - no reward for Sziggy's quest if took over 255 days to complete
+       | - repeat special location entry msgs once rested
+       | - explain, by describing the weather, when woken up by thunder
+       | - adjusted store buyback price factors
+       | - increased quack beverage max rarity & imposed a wait on next offer
+       | x a typo fix & cosmetic changes in textual data; 1 new info fish
        | - optimization & code reorganizing
        |
 </pre></body></html>
