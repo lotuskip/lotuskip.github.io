@@ -5,55 +5,6 @@
 (Copied from the changelog file;
 !: note, x: bugfix, X: serious bug (from a technical pov), -: change/addition)
 -------------------------------------------------------------------------------
-435437 | - unaware monsters are now easier to hit
-       | X nonreaped NPCs upon save corrupted the file
-       | - tweaked travel so it gives up less easily
-       | x bring Am'Odders together even if talking to the manic one
-       | x seer "kill" quest target can no longer be non-living
-       | - seers reward w/ language skills more often when fewer tongues known
-       | - seers reward w/ spells more often when fewer spells known
-       | - seers can now have any "alignment" (not tied to language)
-       | - pawnshops now carry occasional already pawned items
-       | x inn rest "until morning" was flawed (from 428003)
-       | - also, changed the time limit for resting until evening/morning
-       | - don't automatically leave home after managing stuff there
-       | - add one more service spot to Meedeeocker; minor changes in Pratof.
-       | X faulty malloc in creating the quack's beverage for sale
-       | - repeat instructions in L&F on bad input
-       | x fixed Feeble Tongue quirk
-       | - bumblebee starsign help now works every time
-       | x shields shouldn't be "of [foo] mowing"
-       | x acid blade should deal acid damage also when tossed
-       | x iron k. shouldn't work when sps=0
-       | x fliers should be vulnerable to water
-       | - lenitive food effect is now harder to resist
-       | X double free when searching certain Chuck'ole muckheaps (from 434297)
-       | - almost deserted anthills can now withstand dmg (simplifies code)
-       | - the type description of a few items may have changed (--||--)
-       | - SC can now hit both object & NPC on the same tile (--||--)
-       | - SC backfire now strikes last monster hit & not killed if any
-       | - small changes in how spellcasting "trains" whizpower
-       | - small adjustments in starting spell likelihoods
-       | x Mule didn't have an effect on tiring even though burden does
-       | - offensive spells are described as such when "RFND"
-       | x Bliz-E., SC & eddy attacks now damage carried items
-       | x miasmas & shambling/sorry vertices dealt wrong dmg type on objects
-       | x don't identify items on the ground if blind
-       | - msg when blindness ends
-       | x it's no longer possible to eat/drink while underwater
-       | - permit doombr. sps to exceed max from corpse eating
-       | - abilities now can't fail twice in a row due to panic/drunkenness
-       | - give a bit of xp for using alchemy
-       | - picking pockets fights boredom less as PC attains higher rungs
-       | - jargon can now work on inherently hostile NPCs & yields xp
-       | - postglory gets more exciting & can return hps
-       | x reset msg delay when msgs are cleared
-       | - always clear msgs when viewing spellbook
-       | x change Bloch's response to smalltalk when he's hostile
-       | - generated YM now has longer words on average
-       | x typo fixes & cosmetic changes in textual data
-       | - optimization & code reorganizing
-       |
 435763 | x 435437 messed up inventory misc slot checks
        | x 435437 partially broke dynamic lighting!
        | x 435437 broke overlapping multitile monsters!!
@@ -71,6 +22,35 @@
        | - adjusted store buyback price factors
        | - increased quack beverage max rarity & imposed a wait on next offer
        | x a typo fix & cosmetic changes in textual data; 1 new info fish
+       | - optimization & code reorganizing
+       |
+436171 | - monsters take a moment devouring tossed items, longer w/ heavy ones
+       | - when the PC is "too afraid" to fight, the non-attack takes less time
+       | - eating food of delousation now actually can do something
+       | X a recent update left an off-by-1 bug in dropping items
+       | - when switching places, the target now loses some time, too
+       | - significantly modified catapult range & accuracy
+       | x catapulting Acid B. now causes acid damage, too
+       | - increased damage from tossed heavy items
+       | x undecided NPCs became companions when "not pleased" by tossed items
+       | - the "nearest town", when there are >1, can now be any of them
+       | - services in dungeons are now always open
+       | - expand remembered area around dungeon entries
+       | - Relocate S. can now be controlled similarly to Blinkiflash
+       | x seeing effect of Acid B./RBR didn't (always) interrupt tasks
+       | x "nothing to use there" msg got lost in a recent update
+       | x "you can see again" msg shouldn't be shown during rest
+       | x cuckoo clock only cuckooed half of the time
+       | - made innovating "patentables" a bit rarer
+       | - improved the interface of fixing items vs. mechas
+       | x fixed how "size up" could reveal invisible NPCs (+ side effect)
+       | - also, pp limit in sizing up is no longer constant
+       | x unmute a couple creatures that have their own speak verb
+       | x NPCs in wilderness 'suddenly' lost the knowledge of a language
+       | - shuffled some monster rarities & AI parameters
+       | x don't fill msg window w/ multiple re'd'escribes
+       | x don't list dir keys when asking dir (since keys may be redefined)
+       | x a typo fix & cosmetic changes in textual data
        | - optimization & code reorganizing
        |
 </pre></body></html>
