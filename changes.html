@@ -5,19 +5,6 @@
 (Copied from the changelog file;
 !: note, x: bugfix, X: serious bug (from a technical pov), -: change/addition)
 -------------------------------------------------------------------------------
-436999 | ! saves & igloo INCOMPATIBLE
-       | x don't give stat boni for eating non-food things!
-       | - don't count paralyzed neighboring monsters in missiling penalty
-       | - you can no longer be "too afraid" to attack if starving/parched
-       | x Mule wearing out now gives a stronger interrupt (stops waiting)
-       | - quacks' long treatment now reduces tiredness level
-       | - pawnshops now have <=1 pre-pawned item & less often
-       | - cold dmg now only damages (not insta-destroys) water vuln. items
-       | - several "food-like" effects now work on hp sources, too
-       | x don't give location entry msgs if PC is blind
-       | x typo fixes & cosmetic changes in textual data
-       | - optimization & code reorganizing
-       |
 437467 | - becoming blinded now costs some time (NPCs, too)
        | x clarified rules of using RFND blind (still complex, tho)
        | - changes in monster dmg res/vul/imm props
@@ -27,5 +14,16 @@
        | - don't give feeling alert msg in endgame
        | x typo fixes & cosmetic changes in textual data
        | - optimization & code reorganizing
+       |
+439123 | - starvation & being parched now deal dmg progressively
+       | X unfathomable bug _still_ in seer teaching (null deref. from 437467)
+       | - casino excitement now entirely depends on winnings vs. bet
+       | - increased L&F item count
+       | - add exit msgs to cartographers & seers
+       | - list "achievements" in hiscores more naturally
+       | x msg buffer review didn't always get cleared properly
+       | - NPCs can no longer teach insults in the language in use
+       | - cosmetic changes in textual data; 1 new info fish
+       | - minor optimization
        |
 </pre></body></html>
