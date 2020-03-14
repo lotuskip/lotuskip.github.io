@@ -5,16 +5,6 @@
 (Copied from the changelog file;
 !: note, x: bugfix, X: serious bug (from a technical pov), -: change/addition)
 -------------------------------------------------------------------------------
-437467 | - becoming blinded now costs some time (NPCs, too)
-       | x clarified rules of using RFND blind (still complex, tho)
-       | - changes in monster dmg res/vul/imm props
-       | x closed services could still be used while standing on the door
-       | x seer tongue teaching was still broken from 435437
-       | X possible segfault in endgame if home found & not true pro yet
-       | - don't give feeling alert msg in endgame
-       | x typo fixes & cosmetic changes in textual data
-       | - optimization & code reorganizing
-       |
 439123 | - starvation & being parched now deal dmg progressively
        | X unfathomable bug _still_ in seer teaching (null deref. from 437467)
        | - casino excitement now entirely depends on winnings vs. bet
@@ -25,5 +15,26 @@
        | - NPCs can no longer teach insults in the language in use
        | - cosmetic changes in textual data; 1 new info fish
        | - minor optimization
+       |
+440047 | - introduced "inflation" due to which saves INCOMPATIBLE
+       | x recent "optimization" caused death msgs to never print
+       | x changed order of handling boredom thus eliminating confusing msgs 
+       | - L&F max item count is now "branch"-dependent
+       | x obscurely, saving the game made caravan offices slightly less likely
+       | x inventory swaps didn't check slot matching both ways (never?)
+       | x several potions were not fragile
+       | - lastium/permantium prefix now affects frenzy modifier too
+       | - slight adjustments in item suffix distribution
+       | - Blank Sheeting now also costs the target some acting time
+       | X stupid goof-up with AE running away
+       | - hostiles can now randomly pick up items even near PC (esp. AoLW...)
+       | - NPC help can now also direct to the Circle
+       | - NPCs are now less often initially friendly
+       | - certain previously gendered monsters are now referred to as "it"
+       | x increased a few imperceptiple delays
+       | - msg when moving underwater blind w/ snorkel
+       | - minor optimization, as a side effect of which:
+       | - change order of inventory timed updates & eternal suff. effects
+       | - cosmetic changes in textual data
        |
 </pre></body></html>
