@@ -5,17 +5,6 @@
 (Copied from the changelog file;
 !: note, x: bugfix, X: serious bug (from a technical pov), -: change/addition)
 -------------------------------------------------------------------------------
-439123 | - starvation & being parched now deal dmg progressively
-       | X unfathomable bug _still_ in seer teaching (null deref. from 437467)
-       | - casino excitement now entirely depends on winnings vs. bet
-       | - increased L&F item count
-       | - add exit msgs to cartographers & seers
-       | - list "achievements" in hiscores more naturally
-       | x msg buffer review didn't always get cleared properly
-       | - NPCs can no longer teach insults in the language in use
-       | - cosmetic changes in textual data; 1 new info fish
-       | - minor optimization
-       |
 440047 | - introduced "inflation" due to which saves INCOMPATIBLE
        | x recent "optimization" caused death msgs to never print
        | x changed order of handling boredom thus eliminating confusing msgs 
@@ -36,5 +25,52 @@
        | - minor optimization, as a side effect of which:
        | - change order of inventory timed updates & eternal suff. effects
        | - cosmetic changes in textual data
+       |
+441011 | ! hopefully for the last time, saves INCOMPATIBLE
+       | x redraw view properly when PC paralyzed
+       | X some things didn't update right when climbing stairs
+       | x don't print certain movement msgs when pushed by something
+       | x PC could circumvent P.Sp. in water
+       | x fix the case of using an adjacent hideplace while hiding in another
+       | - tiles w/ doors/berrybushes that change status are now set unseen
+       | - NPCs help to find towns a bit longer
+       | - smelling dung & hearing hubbub happen a bit earlier
+       | - minor ai tweaks in spellcasting likelihoods
+       | x Flitting F. left dug walls non-seethru
+       | - Whz increments from casting reduced as PC gains rungs
+       | x fasting now => not hungry (fixes some rare inconsistencies)
+       | - glare of D on spawners now makes them sterile
+       | - eyeballing weak hostiles also causes them to hesitate a moment
+       | x rearpoking aware NPCs had the dependence on PC's rung reversed
+       | - innovations are now less often "very dear"
+       | - some details of Trigger H were apparently never implemented
+       | x also, rewrote/clarified boredom mechanics some more (from 440047)
+       | x many protect quests targets & Frawd summons never got selected
+       | x don't allow completing protection quests by resting
+       | - getting caught pickpocketing is more "exciting" than succeeding
+       | - training @ training grounds can now also fight boredom
+       | x reprint statusbar between gambling sessions
+       | x don't print carried pp when seer offers to remove a quirk
+       | X never-held items no longer go into L&F; also fixes a rare memory leak
+       | - make random artifacts a bit more likely (lost 1s may be regen'ed)
+       | - crusaders of Sz now always drop a symbol
+       | x avoid referring to named corpses as "the *"
+       | - using an MC-kit when it cannot be used now costs a turn
+       | x plug "huge" item moving restriction loophole
+       | - huge items now weigh at least 1 cwu
+       | - use rounding in item condition colour selection
+       | - tone down tossing damage; damaging tosses no longer always hit
+       | - you can no longer shoot or throw while submerged
+       | x force clear msgs when getting very bored w/ master erudite
+       | - introduce delays to master erudite boredom
+       | x typo fixes, 1 new info fish & 1 new questionnaire entry
+       | x monster memory entry inflicts list was broken in some "optimization"
+       | - write all initialization errors into stderr, not stdout
+       | - double throughout instead of float; marginal differences possible?
+       | - rewrote timing code; differences should be unnoticeable
+       | - only check save/load errors @ end; no change if all good ;)
+       | - yet more optimization, as a side effect of which:
+       | - check eating underwater before very dear / stubborn
+       | - and, minor changes in random map generation
        |
 </pre></body></html>
