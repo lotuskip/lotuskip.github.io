@@ -5,74 +5,6 @@
 (Copied from the changelog file;
 !: note, x: bugfix, X: serious bug (from a technical pov), -: change/addition)
 -------------------------------------------------------------------------------
-440047 | - introduced "inflation" due to which saves INCOMPATIBLE
-       | x recent "optimization" caused death msgs to never print
-       | x changed order of handling boredom thus eliminating confusing msgs 
-       | - L&F max item count is now "branch"-dependent
-       | x obscurely, saving the game made caravan offices slightly less likely
-       | x inventory swaps didn't check slot matching both ways (never?)
-       | x several potions were not fragile
-       | - lastium/permantium prefix now affects frenzy modifier too
-       | - slight adjustments in item suffix distribution
-       | - Blank Sheeting now also costs the target some acting time
-       | X stupid goof-up with AE running away
-       | - hostiles can now randomly pick up items even near PC (esp. AoLW...)
-       | - NPC help can now also direct to the Circle
-       | - NPCs are now less often initially friendly
-       | - certain previously gendered monsters are now referred to as "it"
-       | x increased a few imperceptiple delays
-       | - msg when moving underwater blind w/ snorkel
-       | - minor optimization, as a side effect of which:
-       | - change order of inventory timed updates & eternal suff. effects
-       | - cosmetic changes in textual data
-       |
-441011 | ! hopefully for the last time, saves INCOMPATIBLE
-       | x redraw view properly when PC paralyzed
-       | X some things didn't update right when climbing stairs
-       | x don't print certain movement msgs when pushed by something
-       | x PC could circumvent P.Sp. in water
-       | x fix the case of using an adjacent hideplace while hiding in another
-       | - tiles w/ doors/berrybushes that change status are now set unseen
-       | - NPCs help to find towns a bit longer
-       | - smelling dung & hearing hubbub happen a bit earlier
-       | - minor ai tweaks in spellcasting likelihoods
-       | x Flitting F. left dug walls non-seethru
-       | - Whz increments from casting reduced as PC gains rungs
-       | x fasting now => not hungry (fixes some rare inconsistencies)
-       | - glare of D on spawners now makes them sterile
-       | - eyeballing weak hostiles also causes them to hesitate a moment
-       | x rearpoking aware NPCs had the dependence on PC's rung reversed
-       | - innovations are now less often "very dear"
-       | - some details of Trigger H were apparently never implemented
-       | x also, rewrote/clarified boredom mechanics some more (from 440047)
-       | x many protect quests targets & Frawd summons never got selected
-       | x don't allow completing protection quests by resting
-       | - getting caught pickpocketing is more "exciting" than succeeding
-       | - training @ training grounds can now also fight boredom
-       | x reprint statusbar between gambling sessions
-       | x don't print carried pp when seer offers to remove a quirk
-       | X never-held items no longer go into L&F; also fixes a rare memory leak
-       | - make random artifacts a bit more likely (lost 1s may be regen'ed)
-       | - crusaders of Sz now always drop a symbol
-       | x avoid referring to named corpses as "the *"
-       | - using an MC-kit when it cannot be used now costs a turn
-       | x plug "huge" item moving restriction loophole
-       | - huge items now weigh at least 1 cwu
-       | - use rounding in item condition colour selection
-       | - tone down tossing damage; damaging tosses no longer always hit
-       | - you can no longer shoot or throw while submerged
-       | x force clear msgs when getting very bored w/ master erudite
-       | - introduce delays to master erudite boredom
-       | x typo fixes, 1 new info fish & 1 new questionnaire entry
-       | x monster memory entry inflicts list was broken in some "optimization"
-       | - write all initialization errors into stderr, not stdout
-       | - double throughout instead of float; marginal differences possible?
-       | - rewrote timing code; differences should be unnoticeable
-       | - only check save/load errors @ end; no change if all good ;)
-       | - yet more optimization, as a side effect of which:
-       | - check eating underwater before very dear / stubborn
-       | - and, minor changes in random map generation
-       |
 441101 | x travel pathfinding greatly improved by a simple bugfix
        | x count last move into move count when it causes immediate death
        | - use rounding in computing perceptions values
@@ -81,5 +13,35 @@
        | - reflect item condition change in 441011 in booklet restoration
        | - minor optimization-like fiddling; side-effects:
        | - don't msg about items etc. when stepping on the endgame trigger
+       |
+441449 | x academy payments got broken in previous "optimization"
+       | x prev. "optimization" also broke abattoirs a bit
+       | x various received but dropped items didn't go to L&F (since 441011)
+       | - NF now affects whiz shoppe item prefix/suffix likelihoods
+       | x NF didn't properly adjust a normal 50/50 chance
+       | - adjust trollen st. xp factor effect
+       | - checking spellbook (no cast) w/ flash m. now takes no time
+       | x Parchment resisting msg wasn't always printed properly
+       | - glaring strong foes with Whz==0 no longer works
+       | x lc 'the' in the msg about the glare having no effect
+       | - the Finger & the glare now auto-aim hostile targets
+       | x Find W. now correctly reports on 0 sps on casters
+       | - single suitable adjacent/self target is now auto-picked
+       | x attack checks for orni/selft. didn't work w/ missiles
+       | x switching places w/ hostiles was allowed by accident (from 441011)
+       | x hitting invisibles got broken again in 441011
+       | - minor adjustment in panic bonus criteria
+       | - successful RFND now causes hesitation in other nearby hostiles
+       | - test for RFND loss on a couple more interruption situations
+       | x blindness wearing off can now interrupt tasks (esp. waiting...)
+       | - still more (minor, this time) tweaking of boredom mechanics
+       | X a hang was possible upon entering Motley
+       | - most types of bread are now susceptible to water
+       | - permantium items can no longer become infected
+       | - "strange" is no longer considered an enchantment
+       | - minor adjustments in endgame-related manicity limits
+       | x igloo accomplishment printing was again broken in 441011
+       | - cosmetic changes in textual data
+       | - optimization / code reorganization
        |
 </pre></body></html>
