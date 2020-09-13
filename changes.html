@@ -5,36 +5,6 @@
 (Copied from the changelog file;
 !: note, x: bugfix, X: serious bug (from a technical pov), -: change/addition)
 -------------------------------------------------------------------------------
-441449 | x academy payments got broken in previous "optimization"
-       | x prev. "optimization" also broke abattoirs a bit
-       | x various received but dropped items didn't go to L&F (since 441011)
-       | - NF now affects whiz shoppe item prefix/suffix likelihoods
-       | x NF didn't properly adjust a normal 50/50 chance
-       | - adjust trollen st. xp factor effect
-       | - checking spellbook (no cast) w/ flash m. now takes no time
-       | x Parchment resisting msg wasn't always printed properly
-       | - glaring strong foes with Whz==0 no longer works
-       | x lc 'the' in the msg about the glare having no effect
-       | - the Finger & the glare now auto-aim hostile targets
-       | x Find W. now correctly reports on 0 sps on casters
-       | - single suitable adjacent/self target is now auto-picked
-       | x attack checks for orni/selft. didn't work w/ missiles
-       | x switching places w/ hostiles was allowed by accident (from 441011)
-       | x hitting invisibles got broken again in 441011
-       | - minor adjustment in panic bonus criteria
-       | - successful RFND now causes hesitation in other nearby hostiles
-       | - test for RFND loss on a couple more interruption situations
-       | x blindness wearing off can now interrupt tasks (esp. waiting...)
-       | - still more (minor, this time) tweaking of boredom mechanics
-       | X a hang was possible upon entering Motley
-       | - most types of bread are now susceptible to water
-       | - permantium items can no longer become infected
-       | - "strange" is no longer considered an enchantment
-       | - minor adjustments in endgame-related manicity limits
-       | x igloo accomplishment printing was again broken in 441011
-       | - cosmetic changes in textual data
-       | - optimization / code reorganization
-       |
 442829 | - Act of F. is now always interesting if something happens
        | - repeated survival on the same square no longer eventually works
        | x don't use Unholy P. if transferred number is 0
@@ -93,5 +63,26 @@
        | - lotus hostiles & protect quest targets can now come in groups
        | - a carcass can no longer be a quest item
        | - water-vulnerables catapulted at water sources get destroyed
+       |
+444443 | ! config incompatible! (use shorter race/class masking strings)
+       | X segfault w/ some unctrled spell casting (maybe from 442829)
+       | x weird typo in ruin placement code, effect hard to explain
+       | x stop digging if some effect destroys pickaxe
+       | - studying tongues from booklets now also requires light
+       | - even 0-dmg attacks now slightly slow down target
+       | - iron k. now halves sps instead of dropping to 0
+       | - give random extra items also to NPCs w/ 3 guaranteed items
+       | x sizing up msg colours had gotten reversed
+       | x sniff vics used very early sometimes printed just a '.'
+       | x bugged msgs when playing jokes w/ a handkerchief
+       | x at some point, Circle visiting msg started repeating each step
+       | - don't use printf() - simplify couple of terminal msgs
+       | - king inc:s now always drop a disguise
+       | - cosmetic changes in textual data
+       | - optimization/refactoring; side effects:
+       | - glare of D. ends RFND even if no suitable target selected
+       | - various actions cause hiding to end always, not just in cases
+       | - Namunah no longer minds place switching / jokes by a nude PC
+       | - return cursor after can't open logfile msg
        |
 </pre></body></html>
