@@ -5,65 +5,6 @@
 (Copied from the changelog file;
 !: note, x: bugfix, X: serious bug (from a technical pov), -: change/addition)
 -------------------------------------------------------------------------------
-442829 | - Act of F. is now always interesting if something happens
-       | - repeated survival on the same square no longer eventually works
-       | x don't use Unholy P. if transferred number is 0
-       | - finishing a prayer now calms down panic
-       | x eyeballed paralyzed NPCs shouldn't drop anything
-       | - you can now use your tool directly by selecting yourself
-       | - allow stepping back once in travel pathfinding
-       | x summoning msg & artifact descriptions were bugged in/after 441011
-       | x & setting NPCs beyond calming likewise
-       | - attacking can render the target's friends beyond calming, too
-       | - selection of a common chatting tongue is no longer deterministic
-       | x blink&teleport made NPCs unintelligent instead of unaware...
-       | - seeing an Acid B. explode is now semi-interesting
-       | X NPC casting of the Finger was broken in 441449
-       | - missile likelihood to hit a tree depends on distance
-       | - staircases ('>') can now block missiles like trees
-       | - minor changes in what types of interrupts major events trigger
-       | x companions acted twice / turn when they "investigated" smthing
-       | X changing places after falling over could lead to trouble
-       | X don't let NPCs teleport once over the edge
-       | X umbrella flight near edge could result in a segfault
-       | x over the edge tossed items shouldn't break "by falling"
-       | x non-waternatives didn't get slowed in water (very old bug)
-       | x changed LOS/LOF-algorithm & its use in certain situations
-       | - limit how much stun effects can stack / round
-       | - an attempt to activate RFND takes a slow PC less time
-       | - if confronted pixie leaves, quest fails
-       | x clarification of code regarding delays & updating view/s-bar
-       | - time passing indicator is no longer shown during rest
-       | - always mention immobility in monster memory description
-       | - insults are more likely when PC's more drunk
-       | - accept capital 'Y'&'N' to all y/n prompts
-       | x delayed inventory msgs sometimes produced an empty msg line
-       | x clarification of handling trepakings vs. missiling
-       | - trepaking items no longer get pickpocketed
-       | - minor changes in what some stores will buy
-       | - (further) major changes in item prefix/suffix value effect
-       | x a throwing boot should appear as '.', not ':'
-       | - the Sampo now only treats one rot-prone item at a time
-       | x various minor bugs w/ using the A.E.
-       | - hp sources are now classified as tools, also
-       | - minor changes in hp/sp adjusts; work tinged item hps similarly
-       | - check multitile monster presence in an area more carefully
-       | - many small changes in monster properties
-       | x never draw dead monsters on view (incl. PC)
-       | x some spaces in strings got replaced by tabs in a recent update
-       | x too long (e.g. comment) lines in config caused trouble
-       | x don't remsg about town entry if slept down below
-       | - cosmetic changes in textual data
-       | - the game no longer creates $HOME/.roguemare - do it yourself
-       | - don't bother w/ the save fail error - figure it out yourself
-       | - optimization / code reorganization; side effects:
-       | - unify cheese squishing interface w/ other item selections
-       | - unify interfaces of choosing a position & shot/toss target
-       | - Tissue C. msgs streamlined to be less varied
-       | - lotus hostiles & protect quest targets can now come in groups
-       | - a carcass can no longer be a quest item
-       | - water-vulnerables catapulted at water sources get destroyed
-       |
 444443 | ! config incompatible! (use shorter race/class masking strings)
        | X segfault w/ some unctrled spell casting (maybe from 442829)
        | x weird typo in ruin placement code, effect hard to explain
@@ -84,5 +25,16 @@
        | - various actions cause hiding to end always, not just in cases
        | - Namunah no longer minds place switching / jokes by a nude PC
        | - return cursor after can't open logfile msg
+       |
+445447 | x Breadcrumbs 2ndary colour accidentally got changed
+       | X L&F could take items w/ hps < 0 (from 441011)
+       | - Amend now applies the common logic of adjusting item hps
+       | - add yet another use for a hanky
+       | - drinks "of doom" now benefit doombringers just like food
+       | - consumables "of scepticism" now penalize sps
+       | x various msgs are no longer recorded in msg log
+       | - increase pathfinding max iterations by 15%
+       | x cosmetic changes in textual data; one typo fix
+       | - minor optimization / code reorganization
        |
 </pre></body></html>
