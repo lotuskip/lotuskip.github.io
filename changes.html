@@ -5,27 +5,6 @@
 (Copied from the changelog file;
 !: note, x: bugfix, X: serious bug (from a technical pov), -: change/addition)
 -------------------------------------------------------------------------------
-444443 | ! config incompatible! (use shorter race/class masking strings)
-       | X segfault w/ some unctrled spell casting (maybe from 442829)
-       | x weird typo in ruin placement code, effect hard to explain
-       | x stop digging if some effect destroys pickaxe
-       | - studying tongues from booklets now also requires light
-       | - even 0-dmg attacks now slightly slow down target
-       | - iron k. now halves sps instead of dropping to 0
-       | - give random extra items also to NPCs w/ 3 guaranteed items
-       | x sizing up msg colours had gotten reversed
-       | x sniff vics used very early sometimes printed just a '.'
-       | x bugged msgs when playing jokes w/ a handkerchief
-       | x at some point, Circle visiting msg started repeating each step
-       | - don't use printf() - simplify couple of terminal msgs
-       | - king inc:s now always drop a disguise
-       | - cosmetic changes in textual data
-       | - optimization/refactoring; side effects:
-       | - glare of D. ends RFND even if no suitable target selected
-       | - various actions cause hiding to end always, not just in cases
-       | - Namunah no longer minds place switching / jokes by a nude PC
-       | - return cursor after can't open logfile msg
-       |
 445447 | x Breadcrumbs 2ndary colour accidentally got changed
        | X L&F could take items w/ hps < 0 (from 441011)
        | - Amend now applies the common logic of adjusting item hps
@@ -36,5 +15,33 @@
        | - increase pathfinding max iterations by 15%
        | x cosmetic changes in textual data; one typo fix
        | - minor optimization / code reorganization
+       |
+446447 | x some msgs identified NPCs when PC was blind
+       | x for PC, pick all hostiles targets actually in LOS
+       | - streamline MFoD msging
+       | x rain puddle generation has been broken maybe always?
+       | - NPCs now also "peer" at catapults
+       | - poisoned inspiring food now works on NPCs
+       | x laxatives didn't work with bulk time passing
+       | x reduce unnecessary redrawing of the view
+       | - increase bolt of lightning delay duration
+       | - rest now returns full hps when Sol was penalized before resting
+       | - xp for learning languages adjusted & now lang-dependent
+       | - successful RFND now reduces panic
+       | - change how the ringmail affects toxic dmg quirks
+       | - allow different NPC-carried random items on the same NPC
+       | - drop ctime; use raw timestamp in eulogy instead
+       | X change filepath handling in case of a malicious HOME(?!)
+       | - code refactoring; side effects:
+       | - allow 1 char longer randomly generated words
+       | - slightly expand the possible starting location area
+       | - minor, hard to describe change in NPC random walking
+       | x add interrupts from various rare effects
+       | - a lotus reward farlushka can no longer be tinted
+       | - msg unseen monster trying to open a door from the other side
+       | - don't return cursor on PC when sensing enchantments
+       | - lightning can now strike in the visible area over the edge
+       | - revert status changing berry bush out of sight becoming unseen
+       | x couple of typo fixes & other changes in textual data
        |
 </pre></body></html>
