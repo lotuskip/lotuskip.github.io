@@ -5,19 +5,8 @@
 (Copied from the changelog file;
 !: note, x: bugfix, X: serious bug (from a technical pov), -: change/addition)
 -------------------------------------------------------------------------------
-445447 | x Breadcrumbs 2ndary colour accidentally got changed
-       | X L&F could take items w/ hps < 0 (from 441011)
-       | - Amend now applies the common logic of adjusting item hps
-       | - add yet another use for a hanky
-       | - drinks "of doom" now benefit doombringers just like food
-       | - consumables "of scepticism" now penalize sps
-       | x various msgs are no longer recorded in msg log
-       | - increase pathfinding max iterations by 15%
-       | x cosmetic changes in textual data; one typo fix
-       | - minor optimization / code reorganization
-       |
 446447 | x some msgs identified NPCs when PC was blind
-       | x for PC, pick all hostiles targets actually in LOS
+       | x for PC, pick all hostile targets actually in LOS
        | - streamline MFoD msging
        | x rain puddle generation has been broken maybe always?
        | - NPCs now also "peer" at catapults
@@ -43,5 +32,25 @@
        | - lightning can now strike in the visible area over the edge
        | - revert status changing berry bush out of sight becoming unseen
        | x couple of typo fixes & other changes in textual data
+       |
+447067 | x always redraw view after sensing enchantments (from 446447)
+       | x 'fooling' was sometimes falsely reported to have succeeded
+       | X masshit no longer asks for confirmation w/ nonhostiles
+       | x Short C. "failsafe" has been bugged for many versions
+       | x pickpockets in towns stopped working in a recent update (I blame gcc)
+       | X prop removal hung (from 446447, -Wall -Wextra *-Wshadow*)
+       | X endgame trigger code accessed freed memory
+       | x 'agitated' vs. Sziggy seer generation conditions were reversed
+       | - changed how xp is rewarded for satisfying Namunah
+       | x higher xp reward for far-away locations was unreasonably restricted
+       | - changed the order of error checks when trying to toss someth.
+       | x fix confused [more]-prompt during travel
+       | - cosmetic changes in textual data
+       | - minor changes in what gets recorded in the msg log
+       | - more refactoring; side-effects:
+       | - change Barrage delay
+       | - unify xp reward for finding the circle, PoTT & lotus grove
+       | - Am'O. annihilation now removes all items&pp (artifacts->L&F)
+       | - the same destroying objects counts towards relevant seer quests
        |
 </pre></body></html>
