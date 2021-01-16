@@ -5,34 +5,6 @@
 (Copied from the changelog file;
 !: note, x: bugfix, X: serious bug (from a technical pov), -: change/addition)
 -------------------------------------------------------------------------------
-446447 | x some msgs identified NPCs when PC was blind
-       | x for PC, pick all hostile targets actually in LOS
-       | - streamline MFoD msging
-       | x rain puddle generation has been broken maybe always?
-       | - NPCs now also "peer" at catapults
-       | - poisoned inspiring food now works on NPCs
-       | x laxatives didn't work with bulk time passing
-       | x reduce unnecessary redrawing of the view
-       | - increase bolt of lightning delay duration
-       | - rest now returns full hps when Sol was penalized before resting
-       | - xp for learning languages adjusted & now lang-dependent
-       | - successful RFND now reduces panic
-       | - change how the ringmail affects toxic dmg quirks
-       | - allow different NPC-carried random items on the same NPC
-       | - drop ctime; use raw timestamp in eulogy instead
-       | X change filepath handling in case of a malicious HOME(?!)
-       | - code refactoring; side effects:
-       | - allow 1 char longer randomly generated words
-       | - slightly expand the possible starting location area
-       | - minor, hard to describe change in NPC random walking
-       | x add interrupts from various rare effects
-       | - a lotus reward farlushka can no longer be tinted
-       | - msg unseen monster trying to open a door from the other side
-       | - don't return cursor on PC when sensing enchantments
-       | - lightning can now strike in the visible area over the edge
-       | - revert status changing berry bush out of sight becoming unseen
-       | x couple of typo fixes & other changes in textual data
-       |
 447067 | x always redraw view after sensing enchantments (from 446447)
        | x 'fooling' was sometimes falsely reported to have succeeded
        | X masshit no longer asks for confirmation w/ nonhostiles
@@ -52,5 +24,16 @@
        | - unify xp reward for finding the circle, PoTT & lotus grove
        | - Am'O. annihilation now removes all items&pp (artifacts->L&F)
        | - the same destroying objects counts towards relevant seer quests
+       |
+447449 | - emerging from a sewer naked now angers townsfolk
+       | x apartments started "opening their doors"...
+       | - service special entry msg likelihood is now affected by Nudgy Fate
+       | - change rules of NPCs waiting / not acting
+       | x ai logic was flawed in corner cases of casting Fl. Fist/Acid B.
+       | x hostiles didn't always treat companions as foes
+       | - increase general spell damage
+       | - determine dmg of F.Puff, B.Ray & Blizzard separately for each tile
+       | x typo fixes, one introduced in 447067
+       | - minor code refactoring
        |
 </pre></body></html>
