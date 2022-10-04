@@ -1,0 +1,39 @@
+<html><head>
+<title>Roguemare changelog</title></head>
+<body>
+<pre>
+(Copied from the changelog file;
+!: note, x: bugfix, X: serious bug (from a technical pov), -: change/addition)
+-------------------------------------------------------------------------------
+456767 | - MAJOR: add random forgetting of world similar to resting
+       | x items weren't described when they could be aimed at
+       | X memory leak when PC collapses while eating or working on a booklet
+       | - lost innovations now go to L&F (bug?)
+       | x Find W. report faulty in certain situations; also print a line after
+       | x you no longer get bitten t'r'avelling in the anthill
+       | x you no longer get pickpocketed while underwater
+       | - Am'Odder annihilation no longer makes endgame trigger vanish
+       | - companion Am'Odders slightly less eager to follow PC
+       | x count unusual interrupted chat as full (psychot.) if only [e]nd left
+       | X improve Wintero's digestion, including fix a segfault
+       | - changed the rules of casting BoJ
+       | - cancer curve made slightly more gentle
+       | - color code distant views
+       | x mostly cosmetic changes in textual data, one pair of missing ""
+       | - minor optimization/refactoring; side effects:
+       | - dividers no longer divide when PC is passed out
+       | - doing one's business now maintains a minimum interest throughout
+       | - bigwigs can't swit'c'h places w/ recently eyeballed npcs
+       | - spell names no longer appear in dreams
+       | - vary color of irritation msg
+       | - minor changes in how long corridors get added in sewers
+       |
+462467 | x reduce unnecessary cursor redrawing (noticable in zutty)
+       | X segfault if PC doesn't move after endgame started
+       | X a use after free in pathfinding
+       | x service preposition (a/an) rule got reversed in a recent update
+       | - slight tweaking of npc status determination logic
+       | - take npc status into account in "alignment" effect of healing
+       | x handle failed closing of hiscore file less incorrectly
+       |
+</pre></body></html>
