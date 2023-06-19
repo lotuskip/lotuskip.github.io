@@ -5,14 +5,6 @@
 (Copied from the changelog file;
 !: note, x: bugfix, X: serious bug (from a technical pov), -: change/addition)
 -------------------------------------------------------------------------------
-462467 | x reduce unnecessary cursor redrawing (noticable in zutty)
-       | X segfault if PC doesn't move after endgame started
-       | X a use after free in pathfinding
-       | x service preposition (a/an) rule got reversed in a recent update
-       | - slight tweaking of npc status determination logic
-       | - take npc status into account in "alignment" effect of healing
-       | x handle failed closing of hiscore file less incorrectly
-       |
 464647 | - let libcurses handle screen size changes internally
        | - certain spells now never fail due to panic if memorized
        | - switch places w/ townsfolk in towns if not attacking them
@@ -23,5 +15,25 @@
        | x faulty msgs when giving offerings & [not] drowning
        | - add still more guaranteed accessibility in Towero
        | - some refactoring, cosmetic changes in textual data
+       |
+468647 | ! major optimizing refactoring; save files incompatible!
+       | - if HOME isn't defined, all files are now sought in working dir
+       | - made quick place switch work w/ companions
+       | - also, delay attacking nonhostiles checks for ornis & selftamers
+       | x mistake in nanosleep call when time >= 1s
+       | - further increase base delay when paralyzed
+       | x ALL fragile items (incl. inherently so) used as melee weapons break
+       | - "huge" weapons that break now do huge dmg
+       | - tiny resisted dmg no longer ups hps (bugfix?)
+       | - slowness of booklet casting now depends on BL skill level
+       | - infection now spreads thru innovation
+       | - cosmetic changes in textual data & some monster specs
+       | - added some compiler optimization hints; enabled "-ffast-math"
+       | - some changes in the READMEs
+       | - minor optimizing obfuscation; side effects:
+       | - light grues' initial item can no longer be a Sz-symbol or kantele
+       | - noticing inv. items rotting is now slightly easier
+       | - "huge" drinks are now even bigger (2x->3x)
+       | - xp awards for special accomplishments changed slightly
        |
 </pre></body></html>
