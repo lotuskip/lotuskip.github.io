@@ -5,17 +5,6 @@
 (Copied from the changelog file;
 !: note, x: bugfix, X: serious bug (from a technical pov), -: change/addition)
 -------------------------------------------------------------------------------
-464647 | - let libcurses handle screen size changes internally
-       | - certain spells now never fail due to panic if memorized
-       | - switch places w/ townsfolk in towns if not attacking them
-       | - getting caught pickpocketing now angers nearby townsfolk
-       | x interrupt PC chores when a hostile/companion no longer paralyzed
-       | - all sources of fire now "scorch" marsh tiles
-       | - shorten juggling indicator in statusbar
-       | x faulty msgs when giving offerings & [not] drowning
-       | - add still more guaranteed accessibility in Towero
-       | - some refactoring, cosmetic changes in textual data
-       |
 468647 | ! major optimizing refactoring; save files incompatible!
        | - if HOME isn't defined, all files are now sought in working dir
        | - made quick place switch work w/ companions
@@ -35,5 +24,54 @@
        | - noticing inv. items rotting is now slightly easier
        | - "huge" drinks are now even bigger (2x->3x)
        | - xp awards for special accomplishments changed slightly
+       |
+470999 | X stupid segfault when taking things from chests (from 468647)
+       | x negative nutrition values accidentally broke in 468647
+       | x "50" specs got messed up in 468647
+       | x fix unintentional uneven distribution in certain randomizations
+       | - significant adjustment in monster buffness vs. PC level curve
+       | X rare segfault when placing Bloch (old)
+       | x Bloch quest check had still been flawed for quite some time
+       | x populate empty caravan destination (prevents too easy Bloch quest)
+       | x state-of-mind adjustments were way off
+       | x swimming vs. "swimmer" stealth effect was all wrong
+       | - changed which persistent actions affect stealth
+       | X you now have to stand on a catapult to fire it (old!)
+       | - add a visual effect for catapult shot landing
+       | - items at feet can now be picked up directly in the inventory view
+       | - related minor visual tweaks in how the inventory behaves
+       | - w/o navkit, give a distance hint of very near known locations
+       | - give most estimated distances&dirs on a per-tile basis
+       | - change how distances are given over the edge (irrelevant..?)
+       | - reveal parts of (certain) whereabouts when memorizing
+       | - permit multiple location reveals when waiting
+       | - waiting indoors can now reveal the direction of the exit
+       | X in some instances npcs could perhaps[?] heal with <0 sps
+       | X various scenarios where sacrificing Whz gave +1 sp w/o casting
+       | - take tiredness into account in RFND difficulty
+       | x quirks were awarded at wrong rung-ups
+       | - give stronger minions earlier
+       | - warn about low piety a bit earlier
+       | x prefices/suffices were interchanged in sensing enchanted items
+       | x services in dungeons had started to close for the night again
+       | x "close up" pawnshops lest special NPCs get generated within...
+       | - casinos w/ very low min bet now let in minors
+       | x various time consuming things happened w/o consumption of food
+       | - spa benefits now require one to be dirty enough
+       | x "jetlag effect" also when resting @ home or inns
+       | - attempting to toss a "sticky" item now uses a turn
+       | x prevent destroying fragile very dears as melee weapons
+       | - apply "huge"-factor to consumables' stat boni, too
+       | - rotten food is now less nutritious
+       | - small tweaks in some item specs
+       | - allow dungeon entries closer to other special locations
+       | - lakeshores are now somewhat less smooth
+       | - some changes in static map data
+       | - cosmetic changes in textual data
+       | - 1 new questionnaire question
+       | - very minor code reorganization; side effects:
+       | - unify certain visual effect delays
+       | - npcs in towns are placed still a bit further from edges
+       | - a change in determinism (postponed rng call)
        |
 </pre></body></html>
